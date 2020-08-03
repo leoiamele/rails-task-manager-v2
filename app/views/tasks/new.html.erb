@@ -1,17 +1,2 @@
-<div class= "container">
-  <h2 class= "mb-4">New Task </h2>
-  <%= form_for(@task) do |f| %>
-    <div class="mb-4">
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </div>
-    <div class="mb-4" >
-      <%= f.label :details %>
-      <%= f.text_field :details %>
-    </div>
-    <div class="mb-4">
-      <%= f.submit "Create", class: "btn btn-secondary m-3"%>
-    </div>
-  <% end %>
-  <%= link_to 'All Tasks', tasks_path %>
-</div>
+<h2> New Task</h2>
+<%= render partial: 'form'%>

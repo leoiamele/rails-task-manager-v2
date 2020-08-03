@@ -1,5 +1,10 @@
-<h2>Task Manager</h2>
-
+<h3>Task Manager</h3>
 <% @tasks.each do |task| %>
-  <h2><%= link_to task.title, task_path(task) %></h2>
+  <%= link_to  task_path(task) do %>
+    <span>
+      <%= task.completed ? "[X]" : [ ] %>
+      <%= task.title %>  
+    </span> 
+    <br>
+  <% end %>
 <%end  %>
