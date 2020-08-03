@@ -1,0 +1,19 @@
+<div class = "container my-3">
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+
+
+  <%= link_to 'All Tasks', tasks_path %>
+
+  <div class="my-4">
+    <%= link_to 'New Task', new_task_path %>
+  </div>
+
+  <div class="my-4">
+    <%= link_to 'Delete Task', task_path(@task), method: "delete", data: {confirm: "Are you sure?"} %>
+  </div>
+
+  <%= link_to "Edit", edit_task_path(@task) %>
+
+
+</div>
